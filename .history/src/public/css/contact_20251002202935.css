@@ -1,0 +1,176 @@
+.header {
+  background: #000;
+}
+
+.header__inner {
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: 1230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.contact-form__heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form__group-content {
+  flex: 1; /* ラベル以外の残り幅を使う */
+}
+
+.header {
+  background: #000;
+}
+
+.header__inner {
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: 1230px;
+}
+
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.contact-form__content {
+  margin: 0 auto;
+  padding: 30px 15px;
+  max-width: 1230px;
+}
+
+.form {
+  margin: 0 auto;
+  width: 700px; /* フォーム全体の幅 */
+}
+
+.form__group {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center; /*縦位置を揃える*/
+  justify-content: center;
+}
+
+.form__group-content {
+  flex: none; /* ラベル以外の残り幅を使う */
+  width: 400px;
+}
+
+.form__group-content--name {
+  display: flex;
+  gap: 20px; /* 山田・太郎の間隔 */
+  width: 400px;
+}
+
+.form__group-content--name .form__input--text,
+.form__group-content--email .form__input--text {
+  flex:1; /* 横幅均等 */
+}
+
+.form__group-content--name .form__input--text input {
+  width: 100%; /* 半分の幅に調整 */
+  box-sizing: border-box; /* paddingやborderを含めて幅を計算 */
+}
+
+.form__group-content--tel {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* 入力欄とハイフンの間隔 */
+}
+
+.form__group-content--tel .form__input--text {
+  width: 80px; /* 電話番号用の入力幅を指定 */
+}
+
+.form__hyphen {
+  display: inline-block;
+}
+
+.form__group-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 180px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.form__label--required {
+  margin-left: 5px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  background: #fafafa;
+  color: #aaa;
+}
+
+.form__radios {
+  display: flex;
+  gap: 20px; /* 男性/女性/その他の間隔 */
+}
+
+.form__radio-title {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* ◯印と文字の間 */
+}
+
+.form__input--select select {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.form__error {
+  height: 20px;
+  color: #ff0000;
+  text-align: left;
+}
+
+.form__input--text,
+.form__input--textarea {
+  flex: 1; /* 親の幅に合わせる */
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.form__input--textarea textarea {
+  height: 180px;
+}
+
+.form__button {
+  margin-top: 30px;
+  display: flex;
+  jus
+}
+
+.form__button-submit {
+  padding: 10px;
+  width: 30%;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+

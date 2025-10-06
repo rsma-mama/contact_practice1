@@ -1,0 +1,67 @@
+/* 確認画面全体 */
+.confirm-form {
+  margin: 0 auto;
+  width: 700px;
+  padding: 30px 15px;
+}
+
+/* 各行（ラベル＋値） */
+.confirm__group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* ラベル部分（例：お名前、性別、メールなど） */
+.confirm__group-title {
+  width: 180px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* 値部分（例：山田 太郎、男性、xxx@example.comなど） */
+.confirm__group-content {
+  flex: none;
+  width: 400px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fafafa;
+}
+
+/* 複数の値（例：姓と名） */
+.confirm__group-content--name {
+  display: flex;
+  gap: 20px;
+}
+
+/* ボタンエリア */
+.confirm__button {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 戻るボタン */
+.confirm__button-back {
+  padding: 6px 20px;
+  font-size: 14px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+/* 送信ボタン */
+.confirm__button-submit {
+  padding: 6px 30px;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}

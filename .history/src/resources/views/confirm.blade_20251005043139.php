@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="/">
+        FashionablyLate
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="confirm__content">
+      <div class="confirm__heading">
+        <h2>Confirm</h2>
+      </div>
+      <form class="form" action="/contact_practice1" method="post">
+        @csrf
+        <!--お名前-->
+        <div class="confirm-table">
+          <table class="confirm-table__inner">
+            <tr class="confirm-table__row">
+              <th class="confirm-table__header">お名前</th>
+              <td class="confirm-table__text">
+                <input type="text" name="first_name" value="{{ $contact['first_name'] }}" readonly />
+                <input type="text" name="last_name" value="{{ $contact['last_name'] }}" readonly />
+              </td>
+            </tr>
+            <!--性別-->
+            <tr class="confirm-table__row">
+              <th class="confirm-table__header">性別</th>
+              <td class="confirm-table__text">
+                <span>
+                @if(($contact['gender'] ?? '')==1)
+                男性
+                @elseif(($contact['gender'] ?? '')==2)
+                女性
+                @elseif(($contact['gender'] ?? '')==3)
+                その他
+                @endif
+                </span>
+                <input type="text" name="gender" value="{{ $contact['gender'] }}" readonly />
+              </td>
+            </tr>
+            <!--メールアドレス-->
+            <tr class="confirm-table__row">
+              <th class="confirm-table__header">メールアドレス</th>
+              <td class="confirm-table__text">
+                <input type="email" name="email" value="{{ $contact['email'] }}" readonly />
+              </td>
+            </tr>
+            <!--電話番号-->
+            <tr class="confirm-table__row">
+              <th class="confirm-table__header">電話番号</th>
+              <td class="confirm-table__text">
+                <input type="tel" name="tel" value="{{ $contact['tel1'] }}-{{ $contact['tel2'] }}-{{ $contact['tel3'] }}" readonly />"
+              </td>
+            </tr>
+            <!--住所-->
+            <tr class="confirm-table__row">
+              <th class="confirm-table__header">住所</th>
+              <td class="confirm-table__text">
+                <input type="text" name="address" value="{{ $contact['address'] }}" readonly />
+              </td>
+            </tr>
+            <!--建物名-->
+            <tr class="confirm-table__row">
+              <th class="confirm-table__header">建物名</th>
+              <td class="confirm-table__text">
+                <input type="text" name="building" value="{{ $contact['building']?? '' }}" readonly />
+              </td>
+            </tr>
+            <!--お問い合わせの種類-->
+            <tr class="confirm-table__row">
+              <th class="confirm-table__header">お問い合わせの種類</th>
+              <td class="confirm-table__text">
+                <span>
+                @if(($contact['inquiry_type'] ?? '')==1)
+                商品のお届けについて
+                @elseif(($contact['inquiry_type'] ??'')==2)
+                商品の交換について
+                @elseif(($contact['inquiry_type'] ??'')==3)
+                商品トラブル
+                @elseif(($contact['inquiry_type'] ??'')==4)
+                ショップへのお問い合わせ
+                @elseif(($contact['inquiry_type'] ??'')==5)
+                その他
+                @endif
+                </span>
+                <input type="text" name="inquiry_type" value="{{ $contact['inquiry_type'] }}" />
+              </td>
+            </tr>
+            <!--お問い合せ内容-->
+            <tr class="confirm-table__row">
+              <th class="confirm-table__header">お問い合わせ内容</th>
+              <td class="confirm-table__text">
+                <textarea name="detail" 　creadonly>{{ $contact['detail'] }}</textarea>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="form__button">
+          <button class="form__button-submit" type="submit">送信</button>
+          <a href="/" class="form__button-cancel">修正</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

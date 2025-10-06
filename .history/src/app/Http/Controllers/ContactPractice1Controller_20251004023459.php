@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Requests\ContactPractice1Request;
+use App\Models\Contact
+
+class ContactPractice1Controller extends Controller
+{
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function confirm(Request $request)
+    {
+        $contact_practice1 = $request->only(['name', 'gender', 'email', 'tel', 'address','building','content']);
+        return view('confirm', compact('contact_practice1'));
+    }
+
+    public function store(Request $request){
+        $contact_practice1 = $request->only(['name', 'gender', 'email', 'tel', 'address','building','content']);
+    }
+
+}

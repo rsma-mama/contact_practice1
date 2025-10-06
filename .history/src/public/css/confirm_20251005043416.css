@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #000;
+  padding: 15px 0;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: center; /* 横方向の中央寄せ */
+  align-items: center;     /* 縦方向の中央揃え */
+  margin: 0 auto;
+  padding: 15px 15px;
+  max-width: 1230px;
+}
+
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.confirm- {
+  margin: 0 auto;
+  padding: 30px 15px;
+  max-width: 1230px;
+}
+
+.confirm__heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.confirm-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.confirm-table__text input {
+  flex: 1;            /* 均等に広げる */
+  min-width: 80px;    /* 必要に応じて最小幅 */
+  box-sizing: border-box;
+}
+
+.confirm-table__inner {
+  width: 100%;
+}
+
+.confirm-table__header {
+  padding: 15px;
+  width: 25%;
+  border-bottom: 1px solid #ddd;
+  background-color: #eee;
+  font-weight: bold;
+  white-space: nowrap; /* 折り返さないようにする */
+}
+
+.confirm-table__text {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+
+  display: flex;      /* ここだけ flex */
+  gap: 10px;          /* input 間の間隔 */
+}
+
+.confirm-table__text input {
+  width: auto;        /* 必要に応じて幅を調整 */
+  flex: 1;            /* 均等に広げたい場合 */
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-row label {
+  width: 150px;  /* ヘッダー部分の幅 */
+  font-weight: bold;
+}
+
+.form-inputs {
+  display: flex;
+  gap: 10px;    /* input間の間隔 */
+  flex: 1;
+}
+
+.form-inputs input {
+  flex: 1;
+  min-width: 80px;
+  box-sizing: border-box;
+}
+
+
+.confirm-table__row:last-child .confirm-table__header,
+.confirm-table__row:last-child .confirm-table__text {
+  border-bottom-width: 0;
+}
+
+.form__button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.form__button-submit {
+  padding: 6px 30px;
+  width: auto;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 15px; /* ボタン同士の余白 */
+}
+
+.form__button-cancel {
+  display: inline-block;
+  padding: 10px;
+  height: 50px;
+  line-height: 30px; /* 高さをそろえる */
+  color: #000;
+  text-decoration: underline; /* 下線を付ける */
+  cursor: pointer;
+}

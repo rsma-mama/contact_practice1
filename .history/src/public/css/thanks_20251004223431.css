@@ -1,0 +1,7 @@
+margin: 0 auto;
+  padding: 10px 25px;
+  max-width: 1230px;
+  display: flex;
+  justify-content: center; /* 横方向の中央寄せ */
+  align-items: center;     /* 縦方向の中央寄せ（必要なら） */
+  flex-direction: column;  /* 縦に並べたい場合 */

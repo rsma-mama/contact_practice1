@@ -1,0 +1,124 @@
+.header {
+  background: #000;
+}
+
+.header__inner {
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: 1230px;
+}
+
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.contact-form__content {
+  margin: 0 auto;
+  padding: 30px 15px;
+  max-width: 1230px;
+}
+
+.contact-form__heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+}
+
+.form__group {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center; /*縦位置を揃える*/
+}
+
+/* お名前の入力欄を横並びにする */
+.form__group-content--name {
+  display: flex;
+  gap: 20px; /* 「山田」と「太郎」の間隔 */
+}
+.form__group-content--name .form__input--text input {
+  width: 290px; /* 半分の幅に調整 */
+}
+
+.form__group-title {
+  width: 150px; /* ← ラベルの幅を固定（お名前/性別/メールなど共通に揃える） */
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /*ラベルの折り返し禁止*/
+}
+
+.form__label--required {
+  margin-left: 5px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  background: #fafafa;
+  color: #aaa;
+}
+
+.form__group-content {
+  display: flex;
+  align-items: center;
+}
+
+/* 共通の入力欄幅 */
+.form__group-content-- .form__input--text input {
+  width: 290px; /* 名前や性別に合わせた幅 */
+}
+
+.form__radios {
+  display: flex;
+  gap: 30px; /* 男性/女性/その他の間隔 */
+  align-items: center;
+}
+
+.form__radio-title {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* ◯印と文字の間 */
+}
+
+.form__error {
+  height: 20px;
+  color: #ff0000;
+  text-align: left;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+  padding: 10px;
+  width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+
+  appearance: none;
+}
+
+.form__input--text input {
+  height: 40px;
+}
+
+.form__input--textarea textarea {
+  height: 180px;
+}
+
+.form__button {
+  margin-top: 30px;
+}
+
+.form__button-submit {
+  padding: 10px;
+  width: 30%;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
